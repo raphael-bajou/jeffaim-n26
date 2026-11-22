@@ -1,13 +1,14 @@
 ---
 import { reglages, telHref } from "../lib/content";
 import Facebook from "./Facebook.astro";
+import Phone from "./Phone.astro";
 ---
 
 <footer class="relative border-t border-white/5 bg-ink-950 pt-20 pb-10">
   <div class="container-site flex flex-col items-center text-center">
     <img src="/img/logo.png" alt="Jef'Faim Pizzas" class="h-16 w-16 object-contain opacity-90" loading="lazy" />
     <p class="mt-6 max-w-md font-serif text-3xl">Une petite faim ? <span class="text-shine">Appelez&#8209;nous.</span></p>
-    <a href={telHref(reglages.telephone)} class="btn btn-primary mt-8 !px-8 !py-4 !text-base">📞 {reglages.telephone}</a>
+    <a href={telHref(reglages.telephone)} class="btn btn-primary mt-8 !px-8 !py-4 !text-base"><Phone class="h-5 w-5 text-ink-950" /> {reglages.telephone}</a>
     <a
       href={reglages.facebook}
       target="_blank"

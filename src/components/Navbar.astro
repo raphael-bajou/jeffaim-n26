@@ -1,6 +1,7 @@
 ---
 import { reglages, telHref, pizzaDuMois } from "../lib/content";
 import Facebook from "./Facebook.astro";
+import Phone from "./Phone.astro";
 ---
 
 <header
@@ -31,7 +32,7 @@ import Facebook from "./Facebook.astro";
         <Facebook class="h-6 w-6" />
       </a>
       <a href={telHref(reglages.telephone)} class="btn btn-primary !px-4 !py-2">
-        <span aria-hidden="true">📞</span>
+        <Phone class="h-4 w-4 text-ink-950" />
         <span class="hidden sm:inline">{reglages.telephone}</span>
         <span class="sm:hidden">Appeler</span>
       </a>
