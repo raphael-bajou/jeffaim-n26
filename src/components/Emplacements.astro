@@ -1,0 +1,56 @@
+---
+import { emplacements, JOURS } from "../lib/content";
+---
+
+<section id="emplacements" class="relative overflow-hidden py-28">
+  <div class="fire-glow !bottom-[-60%] opacity-60" aria-hidden="true"></div>
+  <div class="container-site relative">
+    <p class="eyebrow mx-auto mb-6 max-w-lg" data-reveal>Retrouvons-nous</p>
+    <h2 class="text-center font-serif text-4xl md:text-6xl" data-reveal style="--delay:100ms">
+      Nos rendez-vous de la semaine
+    </h2>
+
+    <!-- « Ce soir » : rempli côté navigateur selon le jour -->
+    <div id="ce-soir" class="mx-auto mt-14 hidden max-w-2xl" data-reveal style="--delay:200ms">
+      <div class="halo rounded-3xl bg-ink-900/90 px-8 py-12 text-center">
+        <span
+          class="inline-flex items-center gap-2 rounded-full bg-flame-400/10 px-3 py-1 text-[0.65rem] font-bold tracking-[0.3em] text-flame-400 uppercase"
+        >
+          <span class="pulse-dot h-2 w-2 rounded-full bg-flame-400"></span>
+          <span id="ce-soir-titre">Ce soir, rendez-vous à</span>
+        </span>
+        <p id="ce-soir-lieu" class="text-shine mt-5 font-serif text-4xl md:text-6xl"></p>
+        <p id="ce-soir-infos" class="mt-3 text-white/60"></p>
+      </div>
+    </div>
+
+    <ol
+      class="mx-auto mt-10 grid max-w-5xl gap-4"
+      style={`grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));`}
+    >
+      {
+        emplacements.map((e, i) => (
+          <li
+            class="place group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-ink-850/80 p-6 text-center transition-all duration-500 hover:-translate-y-1 hover:border-gold-500/40 data-[today]:border-flame-400/60 data-[today]:bg-flame-400/[0.06]"
+            data-day={JOURS.indexOf(e.jour)}
+            data-lieu={e.lieu}
+            data-infos={e.infos ?? ""}
+            data-reveal
+            style={`--delay:${i * 80}ms`}
+          >
+            <p class="text-xs font-semibold tracking-[0.3em] text-gold-400 uppercase">{e.jour}</p>
+            <p class="mt-3 font-serif text-xl leading-snug">{e.lieu}</p>
+            {e.infos && <p class="mt-2 text-sm text-white/50">{e.infos}</p>}
+            <span class="today-badge absolute top-3 right-3 hidden h-2 w-2 rounded-full bg-flame-400 pulse-dot" />
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .place[data-today] .today-badge {
+    display: block;
+  }
+</style>

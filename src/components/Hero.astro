@@ -1,0 +1,87 @@
+---
+import { reglages } from "../lib/content";
+---
+
+<section id="top" class="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-24 pb-16">
+  <!-- braises animées (canvas) + lueur du feu -->
+  <canvas id="embers" class="absolute inset-0 -z-10 h-full w-full" aria-hidden="true"></canvas>
+  <div class="fire-glow -z-20" aria-hidden="true"></div>
+  <div
+    class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(151,138,89,0.12),transparent_60%)]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="container-site flex flex-col items-center text-center">
+    <p class="eyebrow mb-8 w-full max-w-md" data-reveal>Pizzas au feu de bois</p>
+
+    <h1 class="sr-only">Jef'Faim Pizzas</h1>
+
+    <div class="relative w-full max-w-3xl" data-reveal style="--delay:120ms">
+      <img
+        src="/img/paint.jpg"
+        alt="Parmesan, poivrons, tomates, basilic et pommes de terre : les produits frais de Jef'Faim"
+        class="parallax relative w-full [mask-image:radial-gradient(ellipse_at_center,#000_55%,transparent_78%)]"
+        data-speed="0.12"
+        width="942"
+        height="630"
+        fetchpriority="high"
+      />
+    </div>
+
+    <p
+      class="-mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-serif text-2xl sm:text-3xl md:-mt-10 md:gap-x-4 md:text-5xl"
+      data-reveal
+      style="--delay:260ms"
+    >
+      <span>Produits frais</span>
+      <span class="text-shine text-3xl md:text-6xl">+</span>
+      <span>Feu de bois</span>
+      <span class="text-shine text-3xl md:text-6xl">=</span>
+      <span class="inline-block animate-bounce text-5xl md:text-6xl" style="animation-duration:2.4s">🍕</span>
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-3" data-reveal style="--delay:400ms">
+      <a href="#carte" class="btn btn-primary">Voir la carte</a>
+      <a href="#emplacements" class="btn btn-ghost">Où nous trouver ce soir ?</a>
+    </div>
+  </div>
+
+  <a
+    href="#carte"
+    class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[0.65rem] tracking-[0.3em] text-white/40 uppercase transition-colors hover:text-gold-300 md:flex"
+    aria-label="Descendre vers la carte"
+  >
+    Défiler
+    <span class="relative h-10 w-px overflow-hidden bg-white/10">
+      <span class="absolute inset-x-0 top-0 h-1/2 animate-[scrollhint_1.8s_ease-in-out_infinite] bg-gold-400"></span>
+    </span>
+  </a>
+</section>
+
+<!-- bandeau défilant -->
+<div class="marquee overflow-hidden border-y border-white/5 bg-ink-900/60 py-4" aria-hidden="true">
+  <div class="marquee-track flex w-max gap-10 font-serif text-xl whitespace-nowrap text-white/50">
+    {
+      Array.from({ length: 2 }).map(() =>
+        reglages.bandeau.map((t) => (
+          <span class="flex items-center gap-10">
+            {t}
+            <span class="text-gold-500">✦</span>
+          </span>
+        )),
+      )
+    }
+  </div>
+</div>
+
+<style>
+  @keyframes scrollhint {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(200%);
+    }
+  }
+</style>

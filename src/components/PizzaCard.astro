@@ -1,0 +1,56 @@
+---
+import { prix, type Pizza } from "../lib/content";
+
+interface Props {
+  pizza: Pizza;
+  index?: number;
+}
+const { pizza, index = 0 } = Astro.props;
+---
+
+<article
+  class="pizza-card"
+  data-pizza
+  data-base={pizza.base}
+  data-ingredients={JSON.stringify(pizza.ingredients)}
+  data-reveal
+  style={`--delay:${(index % 3) * 90}ms`}
+>
+  {
+    pizza.image && (
+      <div class="relative hidden h-20 w-20 shrink-0 sm:block lg:h-24 lg:w-24">
+        <img
+          src={pizza.image}
+          alt=""
+          loading="lazy"
+          class:list={[
+            "h-full w-full rounded-full object-cover ring-1 ring-white/10",
+            pizza.image_illustrative && "opacity-60 sepia",
+          ]}
+        />
+      </div>
+    )
+  }
+  <div class="relative flex min-w-0 flex-1 flex-col">
+    <div class="flex items-baseline justify-between gap-3">
+      <h3 class="min-w-0 font-serif text-[1.4rem] leading-tight [overflow-wrap:anywhere] first-letter:uppercase">{pizza.nom}</h3>
+      <span class="shrink-0 font-semibold text-gold-300 tabular-nums">{prix(pizza.prix)}</span>
+    </div>
+    {
+      pizza.pizza_du_mois && (
+        <span class="mt-1 text-[0.65rem] font-bold tracking-[0.25em] text-flame-400 uppercase">★ Pizza du mois</span>
+      )
+    }
+    <p class="mt-1 text-xs tracking-wide text-white/40">Base {pizza.base}</p>
+    <ul class="mt-3 flex flex-wrap gap-1.5">
+      {
+        pizza.ingredients.map((ing) => (
+          <li class="chip" data-chip={ing}>
+            {ing}
+          </li>
+        ))
+      }
+    </ul>
+    {pizza.infos && <p class="mt-3 text-sm text-gold-300">{pizza.infos}</p>}
+  </div>
+</article>

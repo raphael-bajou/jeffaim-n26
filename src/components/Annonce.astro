@@ -1,0 +1,13 @@
+---
+import { reglages } from "../lib/content";
+const { annonce } = reglages;
+---
+
+{
+  annonce.active && (
+    <div class="relative z-40 mt-20 border-y border-flame-400/30 bg-flame-400/10 px-6 py-3 text-center text-sm">
+      <strong class="text-flame-400">{annonce.titre}</strong>
+      {annonce.texte && <span class="ml-2 text-white/80">{annonce.texte}</span>}
+    </div>
+  )
+}

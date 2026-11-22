@@ -1,0 +1,87 @@
+---
+import PizzaCard from "./PizzaCard.astro";
+import { carte, pizzasPerso, ingredients, bases, prix } from "../lib/content";
+---
+
+<section id="carte" class="py-28">
+  <div class="container-site">
+    <p class="eyebrow mx-auto mb-6 max-w-lg" data-reveal>À la carte</p>
+    <h2 class="mx-auto max-w-3xl text-center font-serif text-4xl leading-tight md:text-6xl" data-reveal style="--delay:100ms">
+      Quoi de mieux qu'une pizza <span class="text-shine">cuite au feu de bois</span>&nbsp;?
+    </h2>
+    <p class="mx-auto mt-5 max-w-xl text-center text-white/60" data-reveal style="--delay:200ms">
+      … une pizza avec des produits frais, cuisinée par le chef, et cuite au feu de bois 🔥
+    </p>
+
+    <!-- Filtres -->
+    <div
+      id="filtres"
+      class="mx-auto mt-14 max-w-5xl rounded-3xl border border-white/[0.06] bg-ink-900/70 p-6 backdrop-blur md:p-8"
+      data-reveal
+    >
+      <div class="flex flex-col items-center gap-4">
+        <p class="text-xs font-semibold tracking-[0.3em] text-gold-400 uppercase">Choisir la base</p>
+        <div class="flex flex-wrap justify-center gap-2">
+          {
+            bases.map((b) => (
+              <button type="button" class="filter-toggle" data-filter-base={b} aria-pressed="false">
+                Base {b} <span class="ml-1 opacity-60" data-count />
+              </button>
+            ))
+          }
+        </div>
+      </div>
+
+      <details class="group mt-6">
+        <summary
+          class="mx-auto flex w-fit cursor-pointer list-none items-center gap-2 text-xs font-semibold tracking-[0.3em] text-gold-400 uppercase transition-colors hover:text-gold-300"
+        >
+          Filtrer par ingrédients
+          <span class="transition-transform duration-300 group-open:rotate-180">⌄</span>
+        </summary>
+        <div class="mt-5 flex flex-wrap justify-center gap-2">
+          {
+            ingredients.map((i) => (
+              <button type="button" class="filter-toggle !px-3 !py-1.5 !text-xs" data-filter-ing={i} aria-pressed="false">
+                {i} <span class="ml-1 opacity-60" data-count />
+              </button>
+            ))
+          }
+        </div>
+      </details>
+
+      <div class="mt-6 flex items-center justify-center gap-4 text-sm text-white/50">
+        <span id="resultats" aria-live="polite"></span>
+        <button type="button" id="reset-filtres" class="hidden text-gold-300 underline underline-offset-4 hover:text-white">
+          Réinitialiser
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {carte.map((p, i) => <PizzaCard pizza={p} index={i} />)}
+    </div>
+    <p id="aucune" class="mt-10 hidden text-center text-white/50">Aucune pizza avec cette combinaison… mais la pizza perso est là pour ça 😉</p>
+
+    {
+      pizzasPerso.length > 0 && (
+        <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {pizzasPerso.map((p) => (
+            <article
+              class="pizza-card halo !border-transparent md:col-span-2 lg:col-span-3"
+              data-reveal
+            >
+              <div class="flex w-full flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+                <div>
+                  <h3 class="font-serif text-3xl first-letter:uppercase">{p.nom}</h3>
+                  <p class="mt-1 text-white/60">Base tomate ou crème {p.infos && <span class="text-gold-300">{p.infos}</span>}</p>
+                </div>
+                <span class="font-serif text-3xl text-gold-300">{prix(p.prix)}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

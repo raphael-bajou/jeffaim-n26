@@ -1,0 +1,62 @@
+name: Build & publier sur la branche deploy
+
+# Hostinger tire la branche `deploy` avec un simple `git pull`, sans lancer de
+# build. Cette Action construit le site Astro et publie le CONTENU de dist/ à la
+# racine de `deploy`, avec un historique linéaire (pull toujours en fast-forward).
+# Elle tourne à chaque push sur main, y compris les commits faits par Pages CMS.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Publier dist/ à la racine de la branche deploy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin deploy >/dev/null 2>&1; then
+            git fetch origin deploy
+            git worktree add .deploy origin/deploy --detach
+            git -C .deploy checkout -B deploy origin/deploy
+          else
+            git worktree add --detach .deploy
+            git -C .deploy checkout --orphan deploy
+            git -C .deploy rm -rf . 2>/dev/null || true
+          fi
+
+          # remplace intégralement le contenu : les anciens assets hashés
+          # doivent disparaître, sinon ils s'accumulent sur le serveur
+          find .deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r dist/. .deploy/
+
+          cd .deploy
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Build identique au déploiement précédent, rien à pousser."
+          else
+            git commit -m "build: ${{ github.sha }}"
+            git push origin deploy
+          fi

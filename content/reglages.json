@@ -1,0 +1,15 @@
+{
+  "telephone": "07 81 41 79 86",
+  "facebook": "https://www.facebook.com/profile.php?id=100063785373569",
+  "bandeau": [
+    "Produits frais",
+    "Cuite au feu de bois",
+    "Cuisinée par le chef",
+    "Une nouvelle pizza chaque mois"
+  ],
+  "annonce": {
+    "active": false,
+    "titre": "Fermeture pour congés",
+    "texte": "On se retrouve très vite autour du four !"
+  }
+}
