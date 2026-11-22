@@ -2,48 +2,40 @@
 import { reglages } from "../lib/content";
 ---
 
-<section id="top" class="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-24 pb-16">
-  <!-- braises animées (canvas) + lueur du feu -->
-  <canvas id="embers" class="absolute inset-0 -z-10 h-full w-full" aria-hidden="true"></canvas>
-  <div class="fire-glow -z-20" aria-hidden="true"></div>
-  <div
-    class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(151,138,89,0.12),transparent_60%)]"
-    aria-hidden="true"
-  >
-  </div>
+<section id="top" class="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-black pt-24 pb-20">
+  <!-- braises animées (canvas) + lueur du feu, cantonnées au bas du hero -->
+  <canvas id="embers" class="absolute inset-x-0 bottom-0 -z-10 h-[35%] w-full [mask-image:linear-gradient(to_top,#000_50%,transparent)]" aria-hidden="true"></canvas>
+  <div class="fire-glow -z-20 !bottom-[-105%] opacity-60" aria-hidden="true"></div>
 
   <div class="container-site flex flex-col items-center text-center">
-    <p class="eyebrow mb-8 w-full max-w-md" data-reveal>Pizzas au feu de bois</p>
+    <h1 class="sr-only">Jef'Faim Pizzas · pizzas au feu de bois</h1>
 
-    <h1 class="sr-only">Jef'Faim Pizzas</h1>
-
-    <div class="relative w-full max-w-3xl" data-reveal style="--delay:120ms">
-      <img
-        src="/img/paint.jpg"
-        alt="Parmesan, poivrons, tomates, basilic et pommes de terre : les produits frais de Jef'Faim"
-        class="parallax relative w-full [mask-image:radial-gradient(ellipse_at_center,#000_55%,transparent_78%)]"
-        data-speed="0.12"
-        width="942"
-        height="630"
-        fetchpriority="high"
-      />
-    </div>
+    <!-- Image telle quelle, sur noir pur (même fond que l'image) -->
+    <img
+      src="/img/paint.jpg"
+      alt="Parmesan, poivrons, tomates, basilic et pommes de terre : les produits frais de Jef'Faim"
+      class="mx-auto w-full md:w-3/4 lg:w-2/3"
+      width="942"
+      height="630"
+      fetchpriority="high"
+      data-reveal
+    />
 
     <p
-      class="-mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-serif text-2xl sm:text-3xl md:-mt-10 md:gap-x-4 md:text-5xl"
+      class="mt-2 flex flex-col items-center justify-center px-4 font-sans text-2xl font-bold tracking-widest uppercase md:flex-row"
       data-reveal
-      style="--delay:260ms"
+      style="--delay:150ms"
     >
-      <span>Produits frais</span>
-      <span class="text-shine text-3xl md:text-6xl">+</span>
-      <span>Feu de bois</span>
-      <span class="text-shine text-3xl md:text-6xl">=</span>
-      <span class="inline-block animate-bounce text-5xl md:text-6xl" style="animation-duration:2.4s">🍕</span>
+      Produits frais
+      <span class="text-shine mx-3 font-serif">+</span>
+      Feu de bois
+      <span class="text-shine mx-3 font-serif">=</span>
+      <span class="text-6xl">🍕🤤</span>
     </p>
 
-    <div class="mt-10 flex flex-wrap justify-center gap-3" data-reveal style="--delay:400ms">
+    <div class="mt-6 flex flex-wrap justify-center gap-2" data-reveal style="--delay:300ms">
       <a href="#carte" class="btn btn-primary">Voir la carte</a>
-      <a href="#emplacements" class="btn btn-ghost">Où nous trouver ce soir ?</a>
+      <a href="#emplacements" class="btn btn-ghost">Les emplacements</a>
     </div>
   </div>
 
