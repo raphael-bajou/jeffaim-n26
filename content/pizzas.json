@@ -1,0 +1,429 @@
+[
+  {
+    "nom": "La Poitevine",
+    "prix": 16,
+    "base": "crème",
+    "ingredients": [
+      "chèvre du Poitou",
+      "oignons rouge",
+      "jambon cru",
+      "compoté de figues",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "",
+    "image_illustrative": false,
+    "pizza_du_mois": true,
+    "visible": true
+  },
+  {
+    "nom": "petite bambino",
+    "prix": 8.5,
+    "base": "tomate",
+    "ingredients": [
+      "jambon blanc",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "grande bambino",
+    "prix": 10.5,
+    "base": "tomate",
+    "ingredients": [
+      "jambon blanc",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "margharita",
+    "prix": 10,
+    "base": "tomate",
+    "ingredients": [
+      "sauce tomate",
+      "olives",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/olives-2431689_640.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "végétarienne",
+    "prix": 12.5,
+    "base": "tomate",
+    "ingredients": [
+      "poivrons frais",
+      "oignons",
+      "champignons",
+      "tomates cerises confites",
+      "mozzarella",
+      "pesto maison"
+    ],
+    "infos": "",
+    "image": "/img/legumes.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "royale",
+    "prix": 12.5,
+    "base": "tomate",
+    "ingredients": [
+      "jambon blanc",
+      "champignons",
+      "œuf",
+      "olives",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/royale.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "paysanne",
+    "prix": 13,
+    "base": "tomate",
+    "ingredients": [
+      "oignons",
+      "lardons",
+      "champignons",
+      "crème fraîche",
+      "œuf",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/paysanne.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "chorizœuf",
+    "prix": 13,
+    "base": "tomate",
+    "ingredients": [
+      "poivrons frais",
+      "chorizo",
+      "crème fraîche",
+      "œuf",
+      "olives",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/chorizo.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "rustique miel",
+    "prix": 13.5,
+    "base": "tomate",
+    "ingredients": [
+      "lardons",
+      "oignons",
+      "camembert «Le Rustique»",
+      "miel",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/camembert.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "burger",
+    "prix": 14,
+    "base": "tomate",
+    "ingredients": [
+      "viande hachée limousine",
+      "oignons",
+      "cheddar",
+      "sauce burger",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/burger.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "parmesane",
+    "prix": 14,
+    "base": "tomate",
+    "ingredients": [
+      "tomates cerises confites",
+      "jambon cru",
+      "parmesan",
+      "pesto maison"
+    ],
+    "infos": "",
+    "image": "/img/parmesane.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "champignola",
+    "prix": 13.5,
+    "base": "crème",
+    "ingredients": [
+      "poulet",
+      "oignons",
+      "champignons",
+      "gorgonzola",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/champi.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "jambon cheddar",
+    "prix": 13.5,
+    "base": "crème",
+    "ingredients": [
+      "poivrons frais",
+      "jambon blanc",
+      "chorizo",
+      "cheddar",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/cochon.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "carbosane",
+    "prix": 13.5,
+    "base": "crème",
+    "ingredients": [
+      "lardons",
+      "oignons",
+      "parmesan",
+      "œuf",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/carbosane.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "calzone",
+    "prix": 13.5,
+    "base": "crème",
+    "ingredients": [
+      "jambon blanc",
+      "champignons",
+      "œuf",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/calzone.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "nordique",
+    "prix": 14,
+    "base": "crème",
+    "ingredients": [
+      "saumon frais mariné",
+      "champignons",
+      "œuf",
+      "olives",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/viking.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "savoyarde",
+    "prix": 14,
+    "base": "crème",
+    "ingredients": [
+      "pomme de terre",
+      "oignons",
+      "lardons",
+      "reblochon",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/savoie.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "beefola",
+    "prix": 15,
+    "base": "crème",
+    "ingredients": [
+      "viande hachée limousine",
+      "oignons",
+      "chorizo",
+      "gorgonzola",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/vache.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "4 fromages",
+    "prix": 15,
+    "base": "tomate",
+    "ingredients": [
+      "chèvre du Poitou",
+      "gorgonzola",
+      "parmesan",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/fromage.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "chèvre miel",
+    "prix": 15,
+    "base": "crème",
+    "ingredients": [
+      "poulet",
+      "chèvre du Poitou",
+      "miel",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/chevre.jpg",
+    "image_illustrative": true,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "pizza perso",
+    "prix": 15,
+    "base": "au choix",
+    "ingredients": [],
+    "infos": "+ 4 ingrédients au choix",
+    "image": "",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": true
+  },
+  {
+    "nom": "Février",
+    "prix": 15,
+    "base": "tomate",
+    "ingredients": [
+      "jambon blanc",
+      "oignons",
+      "reblochon",
+      "crème fraîche",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/fevrier.png",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": false
+  },
+  {
+    "nom": "La raclette",
+    "prix": 15,
+    "base": "crème",
+    "ingredients": [
+      "pomme de terre",
+      "fondue d'oignons",
+      "diot de Savoie",
+      "fromage raclette",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/raclette.png",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": false
+  },
+  {
+    "nom": "Pizza de Noël",
+    "prix": 16,
+    "base": "crème",
+    "ingredients": [
+      "chanterelles et pieds de moutons frais en persillade",
+      "tomates cerises confites",
+      "magret frais français",
+      "sauce aux jus des chanterelles et pieds de moutons",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/noel.png",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": false
+  },
+  {
+    "nom": "spianatola",
+    "prix": 15,
+    "base": "tomate",
+    "ingredients": [
+      "oignons",
+      "lardons",
+      "spianata picante",
+      "gorgonzola",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/spianatola.png",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": false
+  },
+  {
+    "nom": "beeflochon",
+    "prix": 15,
+    "base": "tomate",
+    "ingredients": [
+      "viande hachée limousine",
+      "lardons",
+      "crème fraîche",
+      "reblochon",
+      "mozzarella"
+    ],
+    "infos": "",
+    "image": "/img/beeflochon.png",
+    "image_illustrative": false,
+    "pizza_du_mois": false,
+    "visible": false
+  }
+]

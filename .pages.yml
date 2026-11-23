@@ -1,30 +1,65 @@
+# Configuration de Pages CMS (https://pagescms.org)
+# Le propriétaire édite le contenu sur app.pagescms.org ; chaque enregistrement
+# crée un commit sur `main`, ce qui relance le build et le déploiement.
+
 media:
-  input: public
-  output: /
+  input: public/img
+  output: /img
+  categories: [image]
+
 content:
-  - name: posts
-    label: Posts
-    type: collection
-    path: src/content/blog
-    view:
-      fields: [ title, draft, date ]
-    fields:
-      - { name: author, label: Author, type: string }
-      - { name: pubDatetime, label: Date, type: date }
-      - { name: modDatetime, label: Date, type: date }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: ogImage, label: Title, type: string }
-      - { name: slug, label: Slug, type: string }
-      - { name: featured, label: Featured, type: boolean }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Body, type: rich-text }
-  - name: about
-    label: About page
+  - name: pizzas
+    label: 🍕 La carte
+    description: Les pizzas affichées sur le site. Cochez « Pizza du mois » sur une seule pizza.
     type: file
-    path: src/pages/about.md
+    path: content/pizzas.json
+    format: json
+    list: true
     fields:
-      - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
-      - { name: title, label: Title, type: string }
-      - { name: body, label: Body, type: rich-text, options: { input: public/assets, output: /assets } }
+      - { name: nom, label: Nom, type: string, required: true }
+      - { name: prix, label: Prix (€), type: number, required: true }
+      - name: base
+        label: Base
+        type: select
+        required: true
+        options:
+          values: [tomate, crème, au choix]
+      - { name: ingredients, label: Ingrédients, type: string, list: true, description: "Sans la base (elle est ajoutée automatiquement)." }
+      - { name: infos, label: Infos complémentaires, type: string, description: "Ex. : + 4 ingrédients au choix" }
+      - { name: image, label: Photo, type: image }
+      - { name: image_illustrative, label: Photo d'illustration (affichée en sépia), type: boolean, default: false }
+      - { name: pizza_du_mois, label: Pizza du mois, type: boolean, default: false }
+      - { name: visible, label: Visible sur le site, type: boolean, default: true, description: "Décochez pour masquer une pizza sans la supprimer." }
+
+  - name: emplacements
+    label: 📍 Emplacements de la semaine
+    type: file
+    path: content/emplacements.json
+    format: json
+    list: true
+    fields:
+      - name: jour
+        label: Jour
+        type: select
+        required: true
+        options:
+          values: [lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche]
+      - { name: lieu, label: Lieu, type: string, required: true }
+      - { name: infos, label: Infos (horaires, adresse…), type: string }
+
+  - name: reglages
+    label: ⚙️ Réglages
+    type: file
+    path: content/reglages.json
+    format: json
+    fields:
+      - { name: telephone, label: Téléphone, type: string, required: true }
+      - { name: facebook, label: Lien Facebook, type: string }
+      - { name: bandeau, label: Phrases du bandeau défilant, type: string, list: true }
+      - name: annonce
+        label: Annonce en haut du site (congés, fermeture…)
+        type: object
+        fields:
+          - { name: active, label: Afficher l'annonce, type: boolean, default: false }
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: string }
