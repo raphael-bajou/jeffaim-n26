@@ -1,7 +1,7 @@
 [
   {
     "nom": "La Poitevine",
-    "prix": 16,
+    "prix": 17,
     "base": "crème",
     "ingredients": [
       "chèvre du Poitou",
@@ -10,8 +10,6 @@
       "compoté de figues",
       "mozzarella"
     ],
-    "infos": "",
-    "image": "",
     "image_illustrative": false,
     "pizza_du_mois": true,
     "visible": true
@@ -24,8 +22,6 @@
       "jambon blanc",
       "mozzarella"
     ],
-    "infos": "",
-    "image": "",
     "image_illustrative": false,
     "pizza_du_mois": false,
     "visible": true
@@ -38,8 +34,6 @@
       "jambon blanc",
       "mozzarella"
     ],
-    "infos": "",
-    "image": "",
     "image_illustrative": false,
     "pizza_du_mois": false,
     "visible": true
@@ -53,7 +47,6 @@
       "olives",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/olives-2431689_640.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -71,7 +64,6 @@
       "mozzarella",
       "pesto maison"
     ],
-    "infos": "",
     "image": "/img/legumes.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -88,7 +80,6 @@
       "olives",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/royale.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -106,7 +97,6 @@
       "œuf",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/paysanne.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -124,7 +114,6 @@
       "olives",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/chorizo.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -141,7 +130,6 @@
       "miel",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/camembert.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -158,7 +146,6 @@
       "sauce burger",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/burger.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -174,7 +161,6 @@
       "parmesan",
       "pesto maison"
     ],
-    "infos": "",
     "image": "/img/parmesane.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -191,7 +177,6 @@
       "gorgonzola",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/champi.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -208,7 +193,6 @@
       "cheddar",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/cochon.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -225,7 +209,6 @@
       "œuf",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/carbosane.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -241,7 +224,6 @@
       "œuf",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/calzone.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -258,7 +240,6 @@
       "olives",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/viking.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -275,7 +256,6 @@
       "reblochon",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/savoie.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -292,7 +272,6 @@
       "gorgonzola",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/vache.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -308,7 +287,6 @@
       "parmesan",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/fromage.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -324,7 +302,6 @@
       "miel",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/chevre.jpg",
     "image_illustrative": true,
     "pizza_du_mois": false,
@@ -334,9 +311,7 @@
     "nom": "pizza perso",
     "prix": 15,
     "base": "au choix",
-    "ingredients": [],
     "infos": "+ 4 ingrédients au choix",
-    "image": "",
     "image_illustrative": false,
     "pizza_du_mois": false,
     "visible": true
@@ -352,7 +327,6 @@
       "crème fraîche",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/fevrier.png",
     "image_illustrative": false,
     "pizza_du_mois": false,
@@ -369,7 +343,6 @@
       "fromage raclette",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/raclette.png",
     "image_illustrative": false,
     "pizza_du_mois": false,
@@ -386,7 +359,6 @@
       "sauce aux jus des chanterelles et pieds de moutons",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/noel.png",
     "image_illustrative": false,
     "pizza_du_mois": false,
@@ -403,7 +375,6 @@
       "gorgonzola",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/spianatola.png",
     "image_illustrative": false,
     "pizza_du_mois": false,
@@ -420,7 +391,6 @@
       "reblochon",
       "mozzarella"
     ],
-    "infos": "",
     "image": "/img/beeflochon.png",
     "image_illustrative": false,
     "pizza_du_mois": false,
