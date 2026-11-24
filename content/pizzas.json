@@ -29,7 +29,7 @@
     ],
     "image_illustrative": false,
     "pizza_du_mois": false,
-    "visible": true
+    "visible": false
   },
   {
     "nom": "petite bambino",
