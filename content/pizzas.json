@@ -28,7 +28,7 @@
       "mozzarella"
     ],
     "image_illustrative": false,
-    "pizza_du_mois": true,
+    "pizza_du_mois": false,
     "visible": true
   },
   {
