@@ -1,5 +1,22 @@
 [
   {
+    "nom": "Pizza de Noël",
+    "prix": 17,
+    "base": "crème",
+    "ingredients": [
+      "Cèpes bronzés et Bordeaux en persillades",
+      "Magret de canard français",
+      "Tomates cerises confites",
+      "Sauce aux cèpes",
+      "Mozza Fior di latte"
+    ],
+    "infos": "Supplément foie gras extra français au poivre sauvage de Madagascar fait maison - +4€",
+    "image": "/img/pizza_noel.png",
+    "image_illustrative": false,
+    "pizza_du_mois": true,
+    "visible": true
+  },
+  {
     "nom": "La Poitevine",
     "prix": 16,
     "base": "crème",
