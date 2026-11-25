@@ -1,27 +1,18 @@
 [
   {
     "jour": "lundi",
-    "lieu": "Bonneuil-Matours",
-    "infos": ""
-  },
-  {
-    "jour": "mardi",
-    "lieu": "Zone de Chalembert (Jaunay-Marigny)",
-    "infos": ""
+    "lieu": "Bonneuil-Matours"
   },
   {
     "jour": "mercredi",
-    "lieu": "Dissay",
-    "infos": ""
+    "lieu": "Dissay"
   },
   {
     "jour": "jeudi",
-    "lieu": "Liniers",
-    "infos": ""
+    "lieu": "Liniers"
   },
   {
     "jour": "vendredi",
-    "lieu": "Montamisé",
-    "infos": ""
+    "lieu": "Montamisé"
   }
 ]
